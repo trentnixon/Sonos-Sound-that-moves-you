@@ -1,0 +1,17 @@
+.BgContainer{
+    z-index: 0;
+    position: sticky;
+    top: 0;
+    height: 0;
+
+    .SectionBgImage{
+
+        top:0;
+        z-index: 0;
+
+        img{
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+}

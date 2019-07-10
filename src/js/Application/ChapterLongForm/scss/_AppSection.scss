@@ -1,0 +1,160 @@
+$bgPath:"https://gdn-cdn.s3.amazonaws.com/embed/2019/04/sonos";
+.ApplicationShell{
+    transition: all .5s linear; 
+    position: relative;
+
+  #Int_0{ 
+      background-color: #000;
+      background-position: center -30vh;
+      h1,p{ color: white;}
+      .Gradient{ background-image: url($bgPath+"/assets/images/000.png");}
+      .SectionInner {
+        background-image: url($bgPath+"/assets/images/000-reverse.png");
+        background-repeat: repeat-x;
+        background-position: top;
+
+      }
+    }  
+  #Int_1{ 
+    background-color: #133f4c;
+    h1{color:white;} p{color: white} 
+    .Gradient{ background-image: url($bgPath+"/assets/images/001.png");}
+
+    .SectionInner {
+      background-image: url($bgPath+"/assets/images/black-reverse.png");
+      background-repeat: repeat-x;
+      background-position: top;
+
+    }
+  }
+    
+  #Int_2{ 
+    background-color: #4f371d;
+    h1{color:white;} p{color: white;}
+    .Gradient{ background-image: url($bgPath+"/assets/images/002.png");}
+    .SectionInner {
+      background-image: url($bgPath+"/assets/images/001-reverse.png");
+      background-repeat: repeat-x;
+      background-position: top;
+
+    }
+  }
+    
+  #Int_3{  
+    background-color: #412c19;
+    h1{color:white;} p{color: white;}
+    .Gradient{ background-image: url($bgPath+"/assets/images/003.png");}
+    .SectionInner {
+      background-image: url($bgPath+"/assets/images/002-reverse.png");
+      background-repeat: repeat-x;
+      background-position: top;
+
+    }
+  }
+    
+  #Int_4{ 
+    background-color: #121713;
+     h1{color:white;} p{color: white;}
+     .Gradient{ background-image: url($bgPath+"/assets/images/004.png");}
+     .SectionInner {
+      background-image: url($bgPath+"/assets/images/003-reverse.png");
+      background-repeat: repeat-x;
+      background-position: top;
+
+    }
+    }
+
+    .Gradient{
+      background-repeat: repeat-x;
+      background-size: contain;
+      margin-top: 5vh;
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+1,161616+100&0+0,1+98 */
+    //  background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.01) 1%, rgba(27,27,27,1) 98%, rgba(22,22,22,1) 100%); /* FF3.6-15 */
+     // background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.01) 1%,rgba(27,27,27,1) 98%,rgba(22,22,22,1) 100%); /* Chrome10-25,Safari5.1-6 */
+     // background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.01) 1%,rgba(27,27,27,1) 98%,rgba(22,22,22,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+     // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#161616',GradientType=0 ); /* IE6-9 */
+
+    }
+
+
+
+  #Int_Iframe{  
+    background-color: #161616;
+    .SectionContent{
+      flex-grow: 0;
+    }
+      h1{color:white; margin: 10vh 0 50px 0; line-height: 1.2em; }p{color: white; margin: 0 0 20px 0;}}
+
+    .AppSection{
+      position: relative;
+      min-height: 100vh;
+      background-size: 100% auto;
+      background-position: center -10vh;
+      background-repeat: no-repeat;
+      //margin-bottom: 10px;
+              
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items:stretch;
+              align-content: center;
+    
+            .SectionInner{
+            
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items:stretch;
+              align-content: center;
+
+                .SectionContent{
+                  flex-grow:1;
+                  width: 100%;
+                  display: flex;
+                  align-items:center;
+                  flex-direction:column;
+                  justify-content: center;
+                }
+
+                @import "./ParallaxSection";
+                @import "./TextSection";
+                @import "./AudioPlayer";
+
+            }  
+    }
+
+    // Background Image Height
+    @media only screen and  (min-height : 1000px) {
+      .AppSection{
+        //background-position:  top center;
+      }
+    }
+    @media only screen and (max-height : 1000px) {
+      .AppSection{
+          //background-position: top center;
+      }
+    }
+    
+    @media only screen and (min-width : 992px) and (max-width : 1024px) {
+
+    }
+    /* Large Phones ----------- */
+  @media only screen and(max-width : 768px) {
+    .AppSection{
+      background-size: 100vh;
+      //background-position:  top center;
+    }
+  }
+  @media only screen and  (max-height : 411px) and (orientation: landscape) {
+    .AppSection{background-size: cover;}
+  }
+  /* Medium Phones ----------- */
+  @media only screen and (min-width : 480px) and (max-width : 576px) {}
+
+  /* Small Phones ----------- */
+  @media only screen and (min-width : 320px) and (max-width : 480px) {}
+    
+/* Smartphones (portrait) ----------- */
+  @media only screen and (max-width : 320px) {}
+
+}

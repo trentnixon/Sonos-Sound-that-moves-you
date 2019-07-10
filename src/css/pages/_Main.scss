@@ -1,0 +1,36 @@
+#Glabs{
+
+    // Glabs Container
+    @include BMP(#161616,0%,0%) ;
+ 
+    // Global Page Elements 
+    // EG: btns, links, etc. Things that wont be affected by Device size and width.
+    @import "../components/Btns/_btns.scss"; 
+    @import "../reset/_typography.scss";
+
+    // Media Queries
+    // Global Page Styles
+    @import "../mediaqueries/_Golbal.scss";
+    // Mobile
+    @import "../mediaqueries/_Mobile.scss";
+    // Tablet
+    @import "../mediaqueries/_Tablet.scss";
+    // Desktop
+    @import "../mediaqueries/_Desktop.scss";
+
+    // Application
+    // Include Path to Application SCSS
+    @import "../../js/Application/ChapterLongForm/scss/Application";
+
+
+   
+} 
+
+
+#controlBar.controlBar{
+    background-color: rgba(255,255,255,.5) !important;
+
+    border-radius: 100px;
+
+    border: 1px solid white;
+   }

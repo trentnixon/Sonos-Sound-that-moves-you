@@ -1,0 +1,92 @@
+#Header{
+    @include BMP($PrimaryColor,0%,0 0 10px 0px) ;
+
+    height:80vh;
+    background-position:  top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    align-items: start;
+   
+    .Title{
+ 
+        bottom: -11%;
+        width: auto;
+        padding: 1em;
+        margin: 0;
+        width:100%;
+        position: absolute;
+
+    .Title-Fill-Color{
+        position: absolute;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 100%;
+            background-color: $SecondaryColor;
+            z-index: 0;
+    }
+    .Title-Container{
+        z-index: 10;
+        position: relative;
+        padding: 0;
+        width: 60%;
+        
+        h1{
+            @include FONT($FontLargeSize,$FontLargeLine,600,0 0 0px) ; 
+            color:$Quaternary;
+            padding: 3px 14px; 
+            font-family:  $FontFamilyBody; 
+            letter-spacing: 1px;
+    
+        }
+    
+        h2{
+           
+            @include FONT($FontMedSize,$FontMedLine,$FontMedWeight,0 0 10px) ;
+            color:$PrimaryHColor;
+        }
+    
+        p{
+            @include FONT($FontSmallSize,$FontSmallLine,$FontSmallWeight,0 20% 10px 0 ) ; 
+            display: none;
+        }
+    }
+}
+    
+    .DarkBar{
+        background-color: rgba(0,0,0,.8);
+        height: max-content;
+    }
+
+
+    @import "./_Sponsor_Top.scss";
+
+
+    @media only screen and (min-width : 1500px) {
+        .Title{
+            bottom: -8.5%;
+            .Title-Fill-Color{width: 80%;}
+            .Title-Container{width: 49%;}
+        }
+    
+    }
+    @media only screen and (min-width : 1200px)and (max-width : 1500px) {
+        .Title{
+            .Title-Fill-Color{width: 90%;}
+            .Title-Container{width: 60%;}
+        }
+    }
+    @media only screen and (min-width : 1024px)and (max-width : 1200px) {
+        .Title{
+            .Title-Fill-Color{width: 90%;}
+            .Title-Container{width: 60%;}
+        }
+    }
+    @media only screen and (max-width : 1024px) {
+        .Title{
+            .Title-Fill-Color{width: 100%;}
+            .Title-Container{width: 70%;}
+        }
+    }
+} 
